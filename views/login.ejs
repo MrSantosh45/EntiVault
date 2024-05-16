@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+<div>
+    <h1>Welcome back!</h1>
+    <h6>Get your popcorn ready – Login time!</h6>
+    <form action="/users/login" method="POST">
+        <div>
+            <label for="email" name="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div><br>
+        <div>
+            <label for="password" name="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div><br>
+        <div class="submit-btn-login">
+            <input type="submit" value="Login">
+        </div><br>
+        <a href="/users/register">New here? Register </a> 
+    </form>
+    <ul >
+        <% if(messages.success_msg){ %>
+            <li><%= messages.success_msg %></li>
+        <% } %>
+    </ul>
+    
+    <ul>
+        <% if(messages.error) { %>
+            <li><%= messages.error %></li>
+        <% } %>
+    </ul><br><br><br><br><br>
+    
+<%- include("partials/footer.ejs") %> 

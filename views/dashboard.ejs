@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container-dashboard">
+  <a href="/users/logout">Logout</a>
+  <h1>Hello <%= user.charAt(0).toUpperCase() + user.slice(1) %></h1>
+</div>
+<hr />
+<div class="anime-stat">
+  <div class="submit-btn-login">
+    <input href="/users/entries" type="submit" value="Anime List" />
+  </div>
+  <br />
+  <h3>My Statistics</h3>
+  <p>Anime Entries: 1</p>
+  <p>Watching: 1</p>
+  <p>Completed: 1</p>
+  <p>On-Hold: 1</p>
+  <p>Dropped: 1</p>
+  <p>Plant to Watch: 1</p>
+  <p>Total Episodes: 1</p>
+</div>
+<hr />
+<%- include("partials/footer.ejs") %>
